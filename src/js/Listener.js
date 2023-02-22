@@ -6,6 +6,8 @@ export const Listener = () => {
   const $labels = document.querySelectorAll('label')
   const $lengthValue = document.querySelector('.length-value')
   const $qualityBar = document.querySelector('.quality-bar')
+  const $btnCopy = document.querySelector('.btn-copy')
+  const $btnRenew = document.querySelector('.btn-renew')
 
   const pass = {
     hash: '',
@@ -38,6 +40,14 @@ export const Listener = () => {
     }
 
     setPass(pass)
+  })
+
+  $btnCopy.addEventListener('click', () => {
+    navigator.clipboard.writeText(pass.hash)
+  })
+
+  $btnRenew.addEventListener('click', () => {
+    window.location.reload()
   })
 
   const setPass = (pass) => {
