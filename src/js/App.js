@@ -1,5 +1,5 @@
-import { Password } from './Password'
+import { Listener } from './Listener.js'
 
-const App = (()=>{
-  console.log('teste app')
+const App = (() => {
+  Listener()
 })()
