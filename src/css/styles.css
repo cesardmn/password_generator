@@ -1,11 +1,12 @@
 :root {
-  --bgGrey: #f2f2f2;
-  --bgWhite: #ffffff;
-  --borderGrey: 1px solid #80808046;
-  --boxShadow: 0 1px 2px #8494a51a;
+  --primary: #685993;
   --critical: #eb5757;
   --warning: #f2c94c;
   --safe: #27ae60;
+  --bgGrey: #f2f2f2;
+  --bgWhite: #ffffff;
+  --borderPrimary: 1px solid var(--primary);
+  --boxShadow: 0 1px 2px #8494a51a;
 }
 
 * {
@@ -13,7 +14,7 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: var(--borderGrey); */
+  /* border: var(--borderPrimary); */
 }
 
 html {
@@ -55,13 +56,17 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.hero-subtitle {
+  color: var(--primary);
+}
+
 .box {
   height: auto;
   width: 100%;
   background-color: var(--bgWhite);
   border-radius: 8px;
   overflow: hidden;
-  border: var(--borderGrey);
+  border: var(--borderPrimary);
   box-shadow: var(--boxShadow);
 }
 
@@ -96,4 +101,31 @@ main {
   width: 35%;
   height: 100%;
   background-color: var(--safe);
+}
+
+.length-wrapper {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pass-length {
+  appearance: none;
+  display: block;
+  background-color: var(--primary);
+  outline: none;
+  height: 10px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.pass-length::-webkit-slider-thumb {
+  appearance: none;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: var(--bgWhite);
+  border: 3px solid var(--primary);
+  border-radius: 50%;
 }
