@@ -1,6 +1,8 @@
 :root {
   --bgGrey: #f2f2f2;
-  --borderGrey: #80808046;
+  --bgWhite: #ffffff;
+  --borderGrey: 1px solid #80808046;
+  --boxShadow: 0 1px 2px #8494a51a;
   --critical: #eb5757;
   --warning: #f2c94c;
   --safe: #27ae60;
@@ -11,7 +13,7 @@
   border: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid var(--borderGrey); */
+  /* border: var(--borderGrey); */
 }
 
 html {
@@ -51,4 +53,47 @@ main {
 
 .hero-title {
   margin-bottom: 0.5rem;
+}
+
+.box {
+  height: auto;
+  width: 100%;
+  background-color: var(--bgWhite);
+  border-radius: 8px;
+  overflow: hidden;
+  border: var(--borderGrey);
+  box-shadow: var(--boxShadow);
+}
+
+.pass-wrapper {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pass-display {
+  line-break: auto;
+  font-size: xx-small;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+.quality-bg {
+  width: 100%;
+  height: 10px;
+  background-color: var(--bgGrey);
+}
+
+.quality-bar {
+  width: 35%;
+  height: 100%;
+  background-color: var(--safe);
 }
