@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/styles.css" />
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- HERO -->
+      <div class="hero">
+        <h1 class="hero-title">Pass Generator</h1>
+        <p class="hero-subtitle">Generate you pass here</p>
+      </div>
+
+      <!-- PASS SECTION -->
+      <section class="box">
+        <div class="pass-wrapper">
+          <div class="pass-display"></div>
+          <div class="quality-bg">
+            <div class="quality-bar"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASS LENGTH  SECTION -->
+      <section class="box">
+        <div class="length-wrapper">
+          <div>Pass length: <span class="length-value"></span></div>
+          <input type="range" class="pass-length" min="4" max="64" value="16" />
+        </div>
+      </section>
+
+      <!-- OPTIONS SECTION -->
+      <section class="box">
+        <ul class="option-list">
+          <li>
+            <input
+              type="checkbox"
+              name="upp"
+              id="upp"
+              checked
+              class="option-input"
+            />
+            <label for="upp" class="op">uppercase</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="num"
+              id="num"
+              checked
+              class="option-input"
+            />
+            <label for="num" class="op">number</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="chr"
+              id="chr"
+              checked
+              class="option-input"
+            />
+            <label for="chr" class="op">charset</label>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ACTION BUTTONS -->
+      <section class="actions">
+        <button class="action-button btn-renew">
+          <img src="./src/img/renew.svg" alt="renew button icon" />
+        </button>
+        <button class="action-button btn-copy">
+          <img src="./src/img/copy.svg" alt="copy button icon" />
+        </button>
+      </section>
+    </main>
+
+    <script src="./src/js/App.js" defer type="module"></script>
+  </body>
+</html>
